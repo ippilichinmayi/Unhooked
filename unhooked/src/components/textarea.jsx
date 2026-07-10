@@ -7,7 +7,6 @@ function NoteTextarea() {
     <section className="notes-panel">
       <div className="notes-header">
         <h2>Notes</h2>
-        <p>Capture ideas while watching.</p>
       </div>
 
       <textarea
