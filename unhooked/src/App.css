@@ -10,26 +10,31 @@ body {
 }
 
 .app-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 360px);
-  align-items: stretch;
-  gap: 20px;
-  min-height: 100vh;
-  padding: 24px;
-  background: linear-gradient(135deg, #11141b 0%, #171a22 100%);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(135deg, #11141b 0%, #171a22 100%);
+    padding: 20px;
 }
 
 
 .notes-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 16px;
-  border-radius: 18px;
-  background: #ffffff;
-  color: #111827;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  min-height: 540px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+    padding: 16px;
+
+    background: white;
+    border-radius: 18px;
+
+    color: #111827;
 }
 
 .notes-header h2 {
@@ -44,16 +49,16 @@ body {
 }
 
 .notes-input {
-  width: 100%;
-  flex: 1;
-  min-height: 420px;
-  border: none;
-  outline: none;
-  resize: none;
-  font: inherit;
-  color: #111827;
-  background: transparent;
-  line-height: 1.6;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+
+    border: none;
+    outline: none;
+    resize: none;
+
+    background: transparent;
+    font: inherit;
 }
 
 .notes-input::placeholder {
