@@ -21,7 +21,7 @@ function Timestamp() {
 
             {vec.map((time, index) => (
                 <div key={index}>
-                    {time.toFixed(2)} seconds
+                    {Math.floor(time / 60)}:{Math.floor(time % 60).toString().padStart(2, "0")} minutes
                 </div>
             ))}
         </div>
