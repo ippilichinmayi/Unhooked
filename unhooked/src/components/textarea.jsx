@@ -16,8 +16,10 @@ function NoteTextarea() {
         onChange={(event) => setNotes(event.target.value)}
         placeholder="Write your notes here..."
       />
-
+      <div className='timestamp-section'>
       <Timestamp />
+      </div>
+      
     </section>
   );
 }
