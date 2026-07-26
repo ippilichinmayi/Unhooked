@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function NoteTextarea({notes,setNotes}) {
+function NoteTextarea({notes,onNotesChange}) {
   //const [notes, setNotes] = useState('');
 
   return (
@@ -12,7 +12,7 @@ function NoteTextarea({notes,setNotes}) {
       <textarea
         className="notes-input"
         value={notes}
-        onChange={(event) => setNotes(event.target.value)}
+        onChange={(event) => onNotesChange(event.target.value)}
         placeholder="Write your notes here..."
       />
 

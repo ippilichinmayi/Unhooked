@@ -2,11 +2,24 @@ import NoteTextarea from './components/textarea'
 import Timestamp from './components/timestamp';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { loadVideoData } from "./storage";
+import { loadVideoData, saveVideoData } from "./storage";
+
+
 
 function NotesPanel() {
     const [notes, setNotes] = useState("");
     const [timestamps, setTimestamps] = useState([]);
+
+    async function handleAddTimestamp(newTimestamp) {
+        const updated = [...timestamps, newTimestamp];
+
+        setTimestamps(updated);
+
+        await saveVideoData({
+            notes,
+            timestamps: updated
+        });
+    }
 
     useEffect(() => {
         async function load() {
@@ -19,16 +32,24 @@ function NotesPanel() {
         load();
     }, []);
 
+    async function handleNotesChange(newNotes) {
+    setNotes(newNotes);
+
+    await saveVideoData({
+        notes: newNotes,
+        timestamps
+    });
+}
     return (
         <section className='notes-panel'>
             <NoteTextarea
                 notes={notes}
-                setNotes={setNotes}
+                onNotesChange={handleNotesChange}
             />
 
             <Timestamp
                 vec={timestamps}
-                setVec={setTimestamps}
+                onAddTimestamp={handleAddTimestamp}
             />
         </section>
         

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Timestamp({vec,setVec}) {
+function Timestamp({vec,onAddTimestamp}) {
    // const [vec, setVec] = useState([]);
 
     function saveTimestamp() {
@@ -18,7 +18,7 @@ function Timestamp({vec,setVec}) {
 
         const time = video.currentTime;   
 
-        setVec(prev => [...prev, {time, image}]);
+        onAddTimestamp({time, image });
     }
 
     return (
