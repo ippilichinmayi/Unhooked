@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function Timestamp() {
-    const [vec, setVec] = useState([]);
+function Timestamp({vec,setVec}) {
+   // const [vec, setVec] = useState([]);
 
     function saveTimestamp() {
         const video = document.querySelector("video");

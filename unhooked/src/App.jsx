@@ -1,10 +1,10 @@
 import './App.css';
-import NoteTextarea from './components/textarea';
+import NotesPanel from './notesPanel';
 
 function App() {
   return (
     <div className="app-shell">
-      <NoteTextarea />
+      <NotesPanel />
     </div>
   );
 }

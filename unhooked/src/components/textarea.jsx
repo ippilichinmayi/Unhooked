@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import Timestamp from './timestamp';
 
-function NoteTextarea() {
-  const [notes, setNotes] = useState('');
+function NoteTextarea({notes,setNotes}) {
+  //const [notes, setNotes] = useState('');
 
   return (
-    <section className="notes-panel">
+    <>
       <div className="notes-header">
         <h2>Notes</h2>
       </div>
@@ -16,11 +15,8 @@ function NoteTextarea() {
         onChange={(event) => setNotes(event.target.value)}
         placeholder="Write your notes here..."
       />
-      <div className='timestamp-section'>
-      <Timestamp />
-      </div>
-      
-    </section>
+
+    </>
   );
 }
 
