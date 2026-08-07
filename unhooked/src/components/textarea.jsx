@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
 function NoteTextarea({notes,onNotesChange}) {
-  //const [notes, setNotes] = useState('');
-
+ 
   return (
     <>
       <div className="notes-header">

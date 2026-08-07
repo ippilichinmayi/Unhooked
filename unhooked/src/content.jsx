@@ -11,7 +11,6 @@ function removeApp() {
 
 function inject() {
 
-    // Home/Search/Shorts -> remove app
     if (!window.location.pathname.startsWith("/watch")) {
         removeApp();
         return;

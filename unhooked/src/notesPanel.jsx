@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { loadVideoData, saveVideoData } from "./storage";
 
-
-
 function NotesPanel() {
     const [notes, setNotes] = useState("");
     const [timestamps, setTimestamps] = useState([]);
